@@ -26,6 +26,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -35,7 +36,8 @@ body * {
 
 /*container*/
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -99,7 +101,7 @@ ul {
   padding: 24px 0;
 }
 
-ul li a{
+ul li a {
   border: 1px solid var(--stroke-color);
   display: flex;
   justify-content: center;
@@ -116,13 +118,13 @@ ul li a{
 
 /* pseudo-selector */
 ul li a:hover {
-  background-color:  var(--surface-color-hover);
-  border: 1.5px solid var(--text-color)
+  background-color: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 /*social-links*/
 #social-links {
-  display:flex;
+  display: flex;
   padding: 24px 0;
   justify-content: center;
   font-size: 24px;
@@ -139,7 +141,7 @@ ul li a:hover {
 
 /* social pseudo selector*/
 #social-links a:hover {
-  background-color:  var(--highlight-color);
+  background-color: var(--highlight-color);
   padding: 16px;
 }
 
@@ -147,4 +149,13 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./Assets/bg-desktop-light.jpg);
+  }
 }
